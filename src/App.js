@@ -20,7 +20,6 @@ function App() {
       <Feature></Feature>
       <AvatarUpload></AvatarUpload>
       <StudentFeedback></StudentFeedback>
-      {/* <Carousel></Carousel> */}
       <Footertwo></Footertwo>
       
       </div>

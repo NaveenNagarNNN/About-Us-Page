@@ -20,6 +20,7 @@ function App() {
       <Feature></Feature>
       <AvatarUpload></AvatarUpload>
       <StudentFeedback></StudentFeedback>
+     
       <Footertwo></Footertwo>
       
       </div>

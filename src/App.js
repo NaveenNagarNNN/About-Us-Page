@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import Navbar from './component/Navbar';
 import './App.css';
+import MediaCard from './component/Image';
+import Footertwo from './component/Footertwo'
+import logo from '../src/Logo.png';
+import Logotry from './Logotry';
+import Feature from './component/Feature';
+import AvatarUpload from './component/Instructor';
+import StudentFeedback from './component/StudentFeedback';
+import Carousel from './component/Carousel';
+// import aboutuslogo from '../src/Aboutus.jpg'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar></Navbar>
+      <MediaCard></MediaCard>
+      <div style={{position:'relative'}}>
+      {/* <img style={{height:50,width: '400px',}} src={logo}></img> */}
+      <Feature></Feature>
+      <AvatarUpload></AvatarUpload>
+      <StudentFeedback></StudentFeedback>
+      {/* <Carousel></Carousel> */}
+      <Footertwo></Footertwo>
+      
+      </div>
+      
+      
+      
     </div>
   );
 }

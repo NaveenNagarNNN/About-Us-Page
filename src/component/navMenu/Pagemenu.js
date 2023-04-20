@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { Link,Typography,Container, Stack } from '@mui/material';
 
 const StyledMenu = styled((props) => (
   <Menu
@@ -16,17 +17,16 @@ const StyledMenu = styled((props) => (
       vertical: 'top',
       horizontal: 'center',
     }}
-    {...props}
-  />
+    {...props}/>
 ))(({ theme }) => ({
   '& .MuiPaper-root': {
-    borderRadius: 6,
-    marginTop: theme.spacing(1),
-    minWidth: 150,
+    borderRadius: 0,
+    marginTop: theme.spacing(2.6),
+    minWidth: 120,
     color:
       theme.palette.mode === 'light' ? 'rgb(55, 65, 81)' : theme.palette.grey[300],
-    boxShadow:
-      'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
+    // boxShadow:
+    //   'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
     '& .MuiMenu-list': {
       padding: '4px 0',
     },
@@ -34,14 +34,15 @@ const StyledMenu = styled((props) => (
       '& .MuiSvgIcon-root': {
         fontSize: 18,
         color: theme.palette.text.secondary,
+        bgcolor:'red',
         marginRight: theme.spacing(1.5),
       },
-      '&:active': {
-        backgroundColor: alpha(
-          theme.palette.primary.main,
-          theme.palette.action.selectedOpacity,
-        ),
-      },
+      // '&:active': {
+      //   backgroundColor: alpha(
+      //     theme.palette.primary.main,
+      //     theme.palette.action.selectedOpacity,
+      //   ),
+      // },
     },
   },
 }));
@@ -57,59 +58,59 @@ function Pagemenu() {
   };
 
   return (
-    <div  >
-      <Button 
-        id="demo-customized-button"
-        aria-controls={open ? 'demo-customized-menu' : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
-        variant="contained"
-        disableElevation        
-        onClick={handleClick}
-        sx={{color: '#000000',textTransform: 'capitalize',}}
-        // onPointerLeave={handleClose}
-        endIcon={<KeyboardArrowDownIcon />}
+    <div >
+
+<Button 
        
-      >
-        Pages
-      </Button>
+       variant="text"
+       disableElevation        
+       onClick={handleClick}
+       sx={{fontSize:11,fontWeight:700,color: '#00306e',textTransform: 'capitalize',}}
+       // onPointerLeave={handleClose}
+       endIcon={<KeyboardArrowDownIcon />}
+      
+     >
+       Pages
+     </Button>
       <StyledMenu
         id="demo-customized-menu"
         MenuListProps={{
           'aria-labelledby': 'demo-customized-button',
         }}
+        
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
       >
-        <MenuItem  disableRipple>
+        <MenuItem sx={{fontSize:11}} disableRipple>
           {/* <EditIcon /> */}
           About
         </MenuItem>
-        <MenuItem  disableRipple>
+        <MenuItem sx={{fontSize:11}} disableRipple>
           {/* <FileCopyIcon /> */}
           Instructor
         </MenuItem>
         {/* <Divider sx={{ my: 0.5 }} /> */}
-        <MenuItem  disableRipple>
+        <MenuItem sx={{fontSize:11}} disableRipple>
           {/* <ArchiveIcon /> */}
           Profile
         </MenuItem>
-        <MenuItem  disableRipple>
+        <MenuItem sx={{fontSize:11}} disableRipple>
           {/* <ArchiveIcon /> */}
           Login
         </MenuItem>
-        <MenuItem  disableRipple>
+        <MenuItem sx={{fontSize:11}} disableRipple>
           {/* <ArchiveIcon /> */}
-          Sign Up
+          Sign up
         </MenuItem>
-        <MenuItem  disableRipple>
+        <MenuItem sx={{fontSize:11}} disableRipple>
           {/* <ArchiveIcon /> */}
           Events
         </MenuItem>
         
       </StyledMenu>
-    </div>
+      
+      </div>
   );
 }
 export default  Pagemenu;

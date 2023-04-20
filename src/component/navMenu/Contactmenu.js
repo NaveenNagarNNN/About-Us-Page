@@ -20,13 +20,13 @@ const StyledMenu = styled((props) => (
   />
 ))(({ theme }) => ({
   '& .MuiPaper-root': {
-    borderRadius: 6,
-    marginTop: theme.spacing(1),
-    minWidth: 180,
+    borderRadius: 0,
+    marginTop: theme.spacing(2.6),
+    minWidth: 120,
     color:
       theme.palette.mode === 'light' ? 'rgb(55, 65, 81)' : theme.palette.grey[300],
-    boxShadow:
-      'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
+    // boxShadow:
+    //   'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
     '& .MuiMenu-list': {
       padding: '4px 0',
     },
@@ -59,16 +59,11 @@ function Contactmenu() {
   return (
     <div  >
       <Button 
-        id="demo-customized-button"
-        aria-controls={open ? 'demo-customized-menu' : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
-        variant="contained"
-        disableElevation        
+            
         onClick={handleClick}
-        sx={{color: '#000000',textTransform: 'capitalize',}}
+        sx={{fontSize:11,fontWeight:700,color: '#00306e',textTransform: 'capitalize',}}
         // onPointerLeave={handleClose}
-       
+        // endIcon={<KeyboardArrowDownIcon />}
        
       >
         Contact

@@ -4,8 +4,8 @@ import aboutuslogo from '../src/echooling-logo.png'
 
 function Logotry() {
   return (
-    <div>
-    <img  style={{height:50,width: '150px',alignContent:'flex-start'}} src={aboutuslogo}></img>
+    <div style={{justifyContent:'center'}}>
+    <img  style={{height:35,width: '100%',alignContent:'flex-start'}} src={aboutuslogo}></img>
    </div>
   )
 }

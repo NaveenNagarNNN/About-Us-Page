@@ -12,18 +12,18 @@ import Carousel from './component/Carousel';
 
 function App() {
   return (
-    <div className="App">
+    <div >
       <Navbar></Navbar>
       <MediaCard></MediaCard>
-      <div style={{position:'relative'}}>
-      {/* <img style={{height:50,width: '400px',}} src={logo}></img> */}
+      {/* <div style={{position:'relative'}}>
+      <img style={{height:50,width: '400px',}} src={logo}></img> */}
       <Feature></Feature>
       <AvatarUpload></AvatarUpload>
       <StudentFeedback></StudentFeedback>
      
       <Footertwo></Footertwo>
       
-      </div>
+      {/* </div> */}
       
       
       

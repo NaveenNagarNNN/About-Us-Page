@@ -50,42 +50,20 @@ function Album() {
         </Toolbar>
       </AppBar> */}
 
-      <main color='white'>
-        {/* Hero unit */}
-        {/* <Box
-          sx={{
-            // bgcolor: '#f2f4f9',
-            pt: 12,
-            pb: 1,
-          }}
-        >
-          <Container  maxWidth="sm">
-            <Typography
-              component="h1"
-              variant="h6" fontWeight={600} fontSize={15}
-              align="center"
-              color="#d2093c"
-              gutterBottom 
-            >
-              Course Instructors
-            </Typography>
-            <Typography variant="h4"  fontFamily={'sans-serif'} align="center" lineHeight={1.5} fontWeight={800} color="#0f1216" paragraph>
-            Meet our Class Instructor
-            </Typography>
-          </Container>
-        </Box> */}
+      <main >
+     
         <Box
           sx={{
             // bgcolor: '#f2f4f9',
             pt: 8,
             pb: 8,
-            ml:0,
+            ml:0,bgcolor:'black'
           }}>
           
-        <Container sx={{m:0}} maxWidth="full">
+        <Container sx={{m:0,bgcolor:'red'}} maxWidth="full">
           {/* End hero unit */}
           <Grid sx={{}} container spacing={0} >
-          <Container  maxWidth="sm">
+          <Container  maxWidth="xs">
             <Typography
               component="h1"
               variant="h6" fontWeight={600} fontSize={15}
@@ -102,9 +80,9 @@ function Album() {
           </Container>
 
             {cards.map((card) => (
-              <Grid  spacing={0} item key={card} xs={15} sm={6} md={3}  >
+              <Grid sx={{bgcolor:'green'}} spacing={0} item key={card} xs={15} sm={6} md={3}  >
                 <Card 
-                  sx={{ border:'none',height: '100%',m:0,pt:10, display: 'flex', flexDirection: 'column' }}
+                  sx={{ border:'none',m:0,pt:10, display: 'flex', flexDirection: 'column' }}
                 >
                   {/* <CardMedia
                     component="img"

@@ -15,7 +15,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { createTheme } from '@mui/material/styles';
 import blue from '@mui/material/colors/blue';
-
+import Envatomarket from './navMenu/Envatomarket';
 
 import SearchAppBar from './Searchbar';
 import Pagemenu from './navMenu/Pagemenu';
@@ -60,8 +60,10 @@ function ResponsiveAppBar() {
   
 
   return (
-    <AppBar position="static" sx={{justifyContent:'center',height :80,background : 'white', }}>
-      <Container disableGutters sx={{bgcolor:'white'}} >
+    
+    <AppBar sx={{justifyContent:'center',background : 'white', }}>
+      <Envatomarket></Envatomarket>
+      <Container disableGutters  >
         <Toolbar  disableGutters sx={{ml:1.7,mr:0,cursor:'pointer',bgcolor:'white'}}>
                                                         {/* disableGutters */}
         <Logotry ></Logotry>
@@ -69,12 +71,12 @@ function ResponsiveAppBar() {
 
 
  {/* full screen */}
-          <Box  sx={{ml:7.6,bgcolor:'white',flexGrow: 1,textAlign: 'center', display: { xs: 'none', md: 'flex' }, }}>
+          <Box  sx={{ml:7.6,flexGrow: 1,textAlign: 'center', display: { xs: 'none', md: 'flex' }, }}>
             {pages.map((page) => (
               <Button selectOnFocus blurOnSelect
                 key={page}
                 // onClick={handleCloseNavMenu}
-                sx={{ml:0.5,cursor:'pointer', bgcolor: 'white', display: 'block' }}
+                sx={{ml:0.5,cursor:'pointer',  }}
               >
                 {page}
               </Button>
@@ -126,6 +128,7 @@ function ResponsiveAppBar() {
         </Toolbar>
       </Container>
     </AppBar>
+    
   );
 }
 export default ResponsiveAppBar;

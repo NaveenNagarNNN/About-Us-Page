@@ -8,15 +8,15 @@ import Feature from './component/Feature';
 import AvatarUpload from './component/Instructor';
 import StudentFeedback from './component/StudentFeedback';
 import Carousel from './component/Carousel';
+import Envatomarket from './component/navMenu/Envatomarket';
 // import aboutuslogo from '../src/Aboutus.jpg'
 
 function App() {
   return (
     <div >
+    {/* <Envatomarket></Envatomarket> */}
       <Navbar></Navbar>
       <MediaCard></MediaCard>
-      {/* <div style={{position:'relative'}}>
-      <img style={{height:50,width: '400px',}} src={logo}></img> */}
       <Feature></Feature>
       <AvatarUpload></AvatarUpload>
       <StudentFeedback></StudentFeedback>

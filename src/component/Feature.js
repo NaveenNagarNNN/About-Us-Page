@@ -15,6 +15,10 @@ import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import First from './FeatureImage/First';
+import Logotry from '../Logotry';
+import Second from './FeatureImage/Second';
+import Third from './FeatureImage/Third';
 
 function Copyright() {
   return (
@@ -31,6 +35,7 @@ function Copyright() {
 
 const cards = [0, 1, 2];
 const Headingtext =['Accredited Campus','Best Quality Graduate','Inspiring Student Life']
+const images=[<First/>,<Second/>,<Third/>]
 
 
 const theme = createTheme();
@@ -39,20 +44,14 @@ function Album() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      {/* <AppBar position="relative">
-        <Toolbar>
-          <CameraIcon sx={{ mr: 2 }} />
-          <Typography variant="h6" color="inherit" noWrap>
-          Echooling available courses
-          </Typography>
-        </Toolbar>
-      </AppBar> */}
-      <main color='white'>
+      
+      <main>
         {/* Hero unit */}
         <Box
           sx={{
             bgcolor: '#f2f4f9',
-            pt: 12,
+            // '#f2f4f9'
+            pt: 10,
             pb: 1,
           }}
         >
@@ -71,26 +70,23 @@ function Album() {
             </Typography>
           </Container>
         </Box>
-
-        <Container  sx={{ py: 8,bgcolor: '#f2f4f9' }} maxWidth="full">
+        <Box sx={{bgcolor:'yellowgreen'}}>
+        <Container  sx={{bgcolor: '#f2f4f9' }} maxWidth="full">
           {/* End hero unit */}
-          <Grid sx={{}} container spacing={4} >
+          <Grid sx={{bgcolor: '#f2f4f9'}} container spacing={2} >
             {cards.map((card) => (
-              <Grid  spacing={0} item key={card} xs={14} sm={6} md={4}  >
+              <Grid  item key={card} xs={14} sm={6} md={4}  >
                 <Card 
-                  sx={{borderRadius:4 ,height: '100%',m:2,pt:10, display: 'flex', flexDirection: 'column' }}
+                  sx={{pt:4,bgcolor: 'white',borderRadius:2 , display: 'flex', flexDirection: 'column' }}
                 >
-                  <CardMedia
-                    component="img"
-                    sx={{
-                      // 16:9
-                      pt: '2',
-                    }}
-                    image=""
-                    alt="random"
-                  />
-                  <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography gutterBottom variant="h5" component="h2">
+                 <Container sx={{}}>
+                    {images[card]}
+                 </Container>
+                  
+                  <CardContent sx={{p:3, flexGrow: 1 }}>
+                    <Typography sx={{fontSize:15,fontWeight:700}}
+                     gutterBottom variant="h6" component="h5">
+                      
                       {Headingtext[card]}
                     </Typography>
                     <Typography>
@@ -106,6 +102,8 @@ function Album() {
             ))}
           </Grid>
         </Container>
+        <Container sx={{bgcolor:'yellow'}}></Container>
+        </Box>
       </main>
       {/* Footer */}
       {/* <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">

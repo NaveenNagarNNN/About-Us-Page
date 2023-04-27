@@ -8,7 +8,6 @@ import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
@@ -16,15 +15,15 @@ import AdbIcon from '@mui/icons-material/Adb';
 import { createTheme } from '@mui/material/styles';
 import blue from '@mui/material/colors/blue';
 import Envatomarket from './navMenu/Envatomarket';
-
 import SearchAppBar from './Searchbar';
 import Pagemenu from './navMenu/Pagemenu';
 import Coursesmenu from './navMenu/Courses';
-import Blogmenu from './navMenu/Blog';
+
 import Categoriesmenu from './navMenu/Categories';
 import Contactmenu from './navMenu/Contactmenu';
 import Logotry from '../Logotry';
 import { KeyboardArrowDown } from '@mui/icons-material';
+import SimpleMenu from './SimpleMenu';
 
 // import logo from '../src/Logo.png';
 
@@ -40,24 +39,20 @@ import { KeyboardArrowDown } from '@mui/icons-material';
 //   },
 // });
 
-const pages = [<Categoriesmenu />,<Homemenu/>,<Pagemenu/>,<Coursesmenu/>,<Blogmenu/>,<Contactmenu/>];  
+const pages = [<Categoriesmenu/>,<Homemenu/>,<Pagemenu/>,<Coursesmenu/>,<Contactmenu/>];  
 // <Pagemenu/>,<Homemenu/>,  <Coursesmenu/>,<Blogmenu/>,<Contactmenu/>,<Categoriesmenu />,
 
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   
-
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
  
-
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
-  
 
   return (
     
@@ -67,13 +62,10 @@ function ResponsiveAppBar() {
         <Toolbar  disableGutters sx={{ml:1.7,mr:0,cursor:'pointer',bgcolor:'white'}}>
                                                         {/* disableGutters */}
         <Logotry ></Logotry>
-             
-
-
  {/* full screen */}
           <Box  sx={{ml:7.6,flexGrow: 1,textAlign: 'center', display: { xs: 'none', md: 'flex' }, }}>
             {pages.map((page) => (
-              <Button selectOnFocus blurOnSelect
+              <Button  
                 key={page}
                 // onClick={handleCloseNavMenu}
                 sx={{ml:0.5,cursor:'pointer',  }}
@@ -82,7 +74,9 @@ function ResponsiveAppBar() {
               </Button>
             ))}
           </Box>
+          {/* <SimpleMenu/> */}
           <SearchAppBar />
+
           {/* mobile screen */}
           <div style={{}}>
           <Box sx={{ alignItems:'center', maxwidth: 991,flexGrow: 1,display: { xs: 'flex', md: 'none' } , background : blue }}>
@@ -111,7 +105,7 @@ function ResponsiveAppBar() {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none' },
+                display: { xs: 'block', md: 'block' },
               }}
             >
               {pages.map((page) => (

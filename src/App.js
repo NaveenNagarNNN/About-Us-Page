@@ -9,20 +9,25 @@ import AvatarUpload from './component/Instructor';
 import StudentFeedback from './component/StudentFeedback';
 import Carousel from './component/Carousel';
 import Envatomarket from './component/navMenu/Envatomarket';
+import SimpleMenu from './component/SimpleMenu';
+import Uiheader from './component/navMenu/Uiheader';
+import Imagelist from './component/Imagelist';
+
 // import aboutuslogo from '../src/Aboutus.jpg'
 
 function App() {
   return (
     <div >
-    {/* <Envatomarket></Envatomarket> */}
-      <Navbar></Navbar>
+      <Envatomarket/>
+      <SimpleMenu></SimpleMenu>
       <MediaCard></MediaCard>
+      <Imagelist></Imagelist>
       <Feature></Feature>
       <AvatarUpload></AvatarUpload>
       <StudentFeedback></StudentFeedback>
      
       <Footertwo></Footertwo>
-      
+   
       {/* </div> */}
       
       

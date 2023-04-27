@@ -11,7 +11,7 @@ import Logotry from '../Logotry';
 
 const Footer = () => {
   return (
-    <AppBar position="static" color="primary">
+    <AppBar position="static" sx={{bgcolor:'#212529',pt:'100px'}}>
       <Toolbar>
         <Grid container spacing={2}>
           <Grid item xs={8} sm={6} md={3} >          

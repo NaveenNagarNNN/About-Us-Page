@@ -3,7 +3,7 @@ import React from 'react'
 
 function Envatomarket() {
   return (
-    <Box sx={{position:'-moz-initial',bgcolor:'#262626',height:45}}>
+    <Box sx={{display:'inline-block',position:'fixed',top:0,left:0,right:0,bgcolor:'#262626',height:'50px',zIndex:10001}}>
         <Container>
             <Button></Button>
         </Container>

@@ -18,15 +18,15 @@ const Search = styled('div')(({ theme }) => ({
   // },
   marginLeft: 0,
   
-  width: '100%',
+  
   [theme.breakpoints.up('sm')]: {
-    marginLeft: theme.spacing(1),
-    width: 'auto',
+    marginLeft: theme.spacing(0),
+    
   },
 }));
 
 const SearchIconWrapper = styled('div')(({ theme }) => ({
-  padding: theme.spacing(0, 14),
+  padding: theme.spacing(0, 12),
   height: '100%',
   position: 'absolute',
   pointerEvents: 'none',
@@ -38,16 +38,16 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: 'inherit',
   '& .MuiInputBase-input': {
-    padding: theme.spacing(1, 1, 1, 2),
+    padding: theme.spacing(0, 0, 1, 2),
     // t,r,b,l
     // vertical padding + font size from searchIcon
-    paddingRight: `calc(1em + ${theme.spacing(2)})`,
+    paddingRight: `calc(1em + ${theme.spacing(1)})`,
     transition: theme.transitions.create('width'),
-    width: '100%',
+    
     [theme.breakpoints.up('sm')]: {
-      width: '18ch',
+      width: '16ch',
       '&:focus': {
-        width: '18ch',
+        width: '16ch',
       },
     },
     
@@ -57,14 +57,12 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 function SearchAppBar() {
   return (
-    <Box sx={{color:'black',flexGrow: 1,display: { xs: 'none', md: 'flex' } }}>
-        <Toolbar sx={{width:'80%'}}>
-          
+    <Box >
+    <Box sx={{mr:0,color:'black',flexGrow: 1,display: { xs: 'none', md: 'flex' } }}>
+        <Toolbar>         
          
           <Search >
-            <SearchIconWrapper 
-           
-            >
+            <SearchIconWrapper>
               <SearchIcon sx={{color:'blue'}}/>
             </SearchIconWrapper>
             <StyledInputBase sx={{fontSize:10}}
@@ -84,6 +82,7 @@ function SearchAppBar() {
             
           </IconButton> */}
         </Toolbar>
+    </Box>
     </Box>
   );
 }

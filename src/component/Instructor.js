@@ -41,34 +41,26 @@ function Album() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      {/* <AppBar position="relative">
-        <Toolbar>
-          <CameraIcon sx={{ mr: 2 }} />
-          <Typography variant="h6" color="inherit" noWrap>
-          Echooling available courses
-          </Typography>
-        </Toolbar>
-      </AppBar> */}
-
-      <main >
+    
+      < >
      
         <Box
           sx={{
             // bgcolor: '#f2f4f9',
             pt: 8,
             pb: 8,
-            ml:0,bgcolor:'black'
+            ml:0
           }}>
           
-        <Container sx={{m:0,bgcolor:'red'}} maxWidth="full">
+        <Container sx={{m:0,border:'none'}} maxWidth="full">
           {/* End hero unit */}
-          <Grid sx={{}} container spacing={0} >
+          <Grid sx={{border:'none',elevation:0}} container spacing={0} >
           <Container  maxWidth="xs">
             <Typography
               component="h1"
               variant="h6" fontWeight={600} fontSize={15}
               align="center"
-              
+              sx={{mt:2}}
               color="#d2093c"
               gutterBottom 
             >
@@ -80,44 +72,33 @@ function Album() {
           </Container>
 
             {cards.map((card) => (
-              <Grid sx={{bgcolor:'green'}} spacing={0} item key={card} xs={15} sm={6} md={3}  >
+              <Grid sx={{border:'none',bgcolor:'white',elevation:0}}  item key={card} xs={15} sm={6} md={3}>
                 <Card 
-                  sx={{ border:'none',m:0,pt:10, display: 'flex', flexDirection: 'column' }}
+                  sx={{ ":hover":{
+                    
+                  },borderRadius:0,bgcolor:'white',m:0,pt:0, display: 'flex' }}
                 >
-                  {/* <CardMedia
-                    component="img"
-                    sx={{
-                      // 16:9
-                      pt: '2',
-                    }}
-                    image=""
-                    alt="random"
-                  /> */}
-                  <CardContent sx={{ justifyContent: 'center',flexGrow: 1 }}>
+                
+                  <CardContent sx={{alignItems: 'center', flexGrow: 1, }}>
                   {/* <ListItemAvatar align="center"> */}
                   
-                  <Stack direction="row" sx={{borderColor:'black'}} >
+                  <Stack direction="row" sx={{justifyContent: 'center',borderColor:'black'}} >
                   
-                  <Avatar   sx={{border:'solid',border:5,borderColor:'white', mb:2,ml:11,width: 100, height: 100}}  alt="Remy Sharp" src="https://echooling-react.vercel.app/static/media/9.11887f172e15a92977b3.jpg" />         
+                  <Avatar   sx={{border:'solid',border:5,borderColor:'white', mb:2,width: 100, height: 100}}  alt="Remy Sharp" src="https://echooling-react.vercel.app/static/media/9.11887f172e15a92977b3.jpg" />         
                         
                 </Stack>
                   
-                      
-                 
-                  
                   {/* </ListItemAvatar> */}
                  
-                            <Typography gutterBottom  component="h2" fontSize={18} fontWeight={700} lineHeight={0}>
-                            {Headingtext[card]}
-                            
-                            </Typography>
-                            <Typography gutterBottom component="h2" fontSize={14}>
-                            
-                            {subheading[card]}
-                            </Typography>
-                            <Typography>
-                    Nulla porttitor accumsan tincidunt. vamus magna justo, lacinia eget consectetur sed,convallis at tellus.
-                            </Typography>
+                          <Typography gutterBottom  component="h2" fontSize={15} fontWeight={700} lineHeight={0.5}
+                          sx={{textAlign:'center'}}>
+                          {Headingtext[card]}                            
+                          </Typography>
+                          <Typography gutterBottom component="h2" fontSize={14}
+                          sx={{textAlign:'center',color:'#5b5f64'}}>                            
+                          {subheading[card]}
+                          </Typography>
+                           
                     
                   </CardContent>
                  
@@ -127,23 +108,8 @@ function Album() {
           </Grid>
         </Container>
         </Box>
-      </main>
-      {/* Footer */}
-      {/* <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
-        <Typography variant="h6" align="center" gutterBottom>
-          Footer
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          color="text.secondary"
-          component="p"
-        >
-          Something here to give the footer a purpose!
-        </Typography>
-        <Copyright />
-      </Box> */}
-      {/* End footer */}
+      </>
+     
     </ThemeProvider>
   );
 }
